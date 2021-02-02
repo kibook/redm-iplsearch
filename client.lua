@@ -1,5 +1,5 @@
 RegisterCommand("imapsearch", function(source, args, raw)
-	local radius = (args[1] and tonumber(args[1])) or 10.0
+	local radius = tonumber(args[1]) or 10.0
 
 	CreateThread(function()
 		local coords = GetEntityCoords(PlayerPedId())
