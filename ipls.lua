@@ -1,13 +1,6 @@
---------------------------------------------------------------------------------
----- imap is part of map (can be house, grass, wall, water, ground, prop etc). 
----- [imap_id] = {hashname,dec_hash,coords.x, coords.y, coord.z, heading}
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
+-- source: https://github.com/femga/rdr3_discoveries/blob/master/imaps/imaps_with_coords_and_heading.lua
 
-
-
-Imaps = {
-	
+Ipls = {
 	[0x332074A1] = {hashname="abandonedcamp_talltrees",dec_hash=857765025,x=-2133.4162597656,y=-1794.1108398438,z=142.3487854004,h=13.19424533844},
 	[0xE3698C1C] = {hashname="aba_01",dec_hash=-479622116,x=2450.3952636718,y=2100.5209960938,z=174.701171875,h=11.637266159058},
 	[0x5FDD97B4] = {hashname="aba_01_long_0",dec_hash=1608357812,x=2452.9907226562,y=2101.0405273438,z=172.49583435058,h=8.2923736572266},
