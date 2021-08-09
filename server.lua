@@ -3,3 +3,11 @@ RegisterCommand("iplsearch", function(source, args, raw)
 
 	TriggerClientEvent("iplsearch:search", source, radius)
 end, true)
+
+RegisterCommand("gotoipl", function(source, args, raw)
+	local hash = tonumber(args[1])
+
+	if hash then
+		TriggerClientEvent("iplsearch:gotoIpl", -1, hash)
+	end
+end, true)

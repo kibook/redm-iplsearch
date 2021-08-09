@@ -1,4 +1,5 @@
 RegisterNetEvent("iplsearch:search")
+RegisterNetEvent("iplsearch:gotoIpl")
 
 function IsIplActiveHash(iplHash)
 	Citizen.InvokeNative(0xD779B9B910BD3B7C, iplHash)
@@ -38,6 +39,16 @@ AddEventHandler("iplsearch:search", function(radius)
 
 		print("Done")
 	end)
+end)
+
+AddEventHandler("iplsearch:gotoIpl", function(hash)
+	for ipl, info in pairs(Ipls) do
+		if ipl == hash then
+			SetEntityCoords(PlayerPedId(), info.x, info.y, info.z)
+			SetEntityHeading(PlayerPedId(), info.h)
+			break
+		end
+	end
 end)
 
 Citizen.CreateThread(function()
