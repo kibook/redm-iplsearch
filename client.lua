@@ -1,10 +1,10 @@
+RegisterNetEvent("iplsearch:search")
+
 function IsIplActiveHash(iplHash)
 	Citizen.InvokeNative(0xD779B9B910BD3B7C, iplHash)
 end
 
-RegisterCommand("iplsearch", function(source, args, raw)
-	local radius = tonumber(args[1]) or 10.0
-
+AddEventHandler("iplsearch:search", function(radius)
 	Citizen.CreateThread(function()
 		local coords = GetEntityCoords(PlayerPedId())
 
